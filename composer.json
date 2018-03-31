@@ -1,0 +1,18 @@
+{
+    "name": "mark/channel-grabber",
+    "description": "Technical challenge for ChannelGrabber",
+    "type": "project",
+    "require": {
+        "php": ">=7.1",
+        "symfony/console": "^4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "authors": [
+        {
+            "name": "Mark Duffield",
+            "email": "duffield.mark+tech@gmail.com"
+        }
+    ]
+}
