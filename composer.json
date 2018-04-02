@@ -14,5 +14,15 @@
             "name": "Mark Duffield",
             "email": "duffield.mark+tech@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "ChannelGrabber\\Converter\\": "src/ChannelGrabber/Converter/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "tests\\ChannelGrabber\\Converter\\": "tests/ChannelGrabber/Converter/"
+        }
+    }
 }
