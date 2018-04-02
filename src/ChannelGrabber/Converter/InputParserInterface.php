@@ -1,6 +1,6 @@
 <?php
 
-namespace ChannelGrabber\Converter\Parser;
+namespace ChannelGrabber\Converter;
 
 interface InputParserInterface
 {

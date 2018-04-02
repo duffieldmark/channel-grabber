@@ -1,14 +1,14 @@
 <?php
 
-namespace ChannelGrabber\Converter\Parser\Input;
+namespace ChannelGrabber\Converter\Input;
 
-use ChannelGrabber\Converter\Parser\InputParserInterface;
+use ChannelGrabber\Converter\InputParserInterface;
 
 /**
  * Converts a CSV string input to a multidimensional array, grouping headers with underscores into nested arrays
  *
  * Class CsvParser
- * @package ChannelGrabber\Converter\Parser\Input
+ * @package ChannelGrabber\Converter\Input
  * @todo This currently only works for nesting one level deep. i.e. address_line1 but not address_lines_line1, needs replacing
  */
 class CsvParser implements InputParserInterface

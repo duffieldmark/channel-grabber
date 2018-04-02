@@ -1,8 +1,8 @@
 <?php
 
-namespace tests\ChannelGrabber\Converter\Parser\Input;
+namespace tests\ChannelGrabber\Converter\Input;
 
-use ChannelGrabber\Converter\Parser\Input\CsvParser;
+use ChannelGrabber\Converter\Input\CsvParser;
 use PHPUnit\Framework\TestCase;
 
 class ProductParserTest extends TestCase
