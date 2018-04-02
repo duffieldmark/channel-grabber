@@ -11,7 +11,7 @@ use ChannelGrabber\Converter\OutputFormatterInterface;
 class XmlFormatter implements OutputFormatterInterface
 {
     /**
-     * @param mixed $data
+     * @param array $data
      * @return string $data
      */
     public function format(array $data): string
