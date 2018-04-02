@@ -3,7 +3,7 @@
     "description": "Technical challenge for ChannelGrabber",
     "type": "project",
     "require": {
-        "php": ">=7.1",
+        "php": ">=7.0",
         "symfony/console": "^4.0",
         "symfony/serializer": "^4.0"
     },
