@@ -1,22 +1,22 @@
 <?php
 
-namespace ChannelGrabber\Parser\Output\JsonParser;
+namespace tests\ChannelGrabber\Converter\Output;
 
 use ChannelGrabber\Converter\Output\JsonFormatter;
 use PHPUnit\Framework\TestCase;
 
-class ProductParserTest extends TestCase
+class ProductFormatterTest extends TestCase
 {
     /** @var JsonFormatter */
-    protected $jsonParser;
+    protected $jsonFormatter;
 
     public function setUp()
     {
         parent::setUp();
-        $this->jsonParser = new JsonFormatter();
+        $this->jsonFormatter = new JsonFormatter();
     }
 
-    public function testParseOneLine()
+    public function testFormatOneLine()
     {
         $data = [
             'name' => 'Dave',
@@ -28,11 +28,11 @@ class ProductParserTest extends TestCase
 
         $expectedOutput = '{"name":"Dave","address":{"line1":"Street","line2":"Town"}}';
 
-        $output = $this->jsonParser->format($data);
+        $output = $this->jsonFormatter->format($data);
         $this->assertEquals($expectedOutput, json_encode(json_decode($output)));
     }
 
-    public function testParseTwoLine()
+    public function testFormatTwoLine()
     {
         $data = [
             [
@@ -53,7 +53,7 @@ class ProductParserTest extends TestCase
 
         $expectedOutput = '[{"name":"Dave","address":{"line1":"Street","line2":"Town"}},{"name":"Mark","address":{"line1":"Street2","line2":"Town2"}}]';
 
-        $output = $this->jsonParser->format($data);
+        $output = $this->jsonFormatter->format($data);
         $this->assertEquals($expectedOutput, json_encode(json_decode($output)));
     }
 }
