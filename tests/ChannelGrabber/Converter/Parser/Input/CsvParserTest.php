@@ -30,6 +30,5 @@ class ProductParserTest extends TestCase
 
         $output = $this->csvParser->parse($csv);
         $this->assertEquals($expectedOutput, $output);
-
     }
 }

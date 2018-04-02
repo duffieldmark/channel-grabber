@@ -6,7 +6,7 @@ interface OutputParserInterface
 {
     /**
      * @param array $data
-     * @return mixed $data
+     * @return string $data
      */
-    public function parse(array $data): mixed;
+    public function parse(array $data): string;
 }
