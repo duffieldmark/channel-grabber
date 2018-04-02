@@ -3,6 +3,7 @@
 namespace ChannelGrabber\Converter\Output;
 
 use ChannelGrabber\Converter\OutputFormatterInterface;
+use Symfony\Component\Serializer\Encoder\XmlEncoder;
 
 /**
  * Class JsonParser
@@ -16,6 +17,7 @@ class XmlFormatter implements OutputFormatterInterface
      */
     public function format(array $data): string
     {
-       //@todo implement method.
+        $encoder = new XmlEncoder();
+        return $encoder->encode($data, 'xml');
     }
 }
