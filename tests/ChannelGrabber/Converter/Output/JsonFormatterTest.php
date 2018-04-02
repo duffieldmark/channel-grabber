@@ -29,6 +29,8 @@ class ProductFormatterTest extends TestCase
         $expectedOutput = '{"name":"Dave","address":{"line1":"Street","line2":"Town"}}';
 
         $output = $this->jsonFormatter->format($data);
+
+        // Json decode and re-encode to remove the pretty printing we do for the actual output, makes it easier to perform assertion
         $this->assertEquals($expectedOutput, json_encode(json_decode($output)));
     }
 
@@ -54,6 +56,8 @@ class ProductFormatterTest extends TestCase
         $expectedOutput = '[{"name":"Dave","address":{"line1":"Street","line2":"Town"}},{"name":"Mark","address":{"line1":"Street2","line2":"Town2"}}]';
 
         $output = $this->jsonFormatter->format($data);
+
+        // Json decode and re-encode to remove the pretty printing we do for the actual output, makes it easier to perform assertion
         $this->assertEquals($expectedOutput, json_encode(json_decode($output)));
     }
 }

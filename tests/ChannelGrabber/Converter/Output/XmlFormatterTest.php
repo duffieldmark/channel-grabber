@@ -30,6 +30,8 @@ class XmlFormatterTest extends TestCase
         $expectedOutput = '<?xml version="1.0"?><response><name>Dave</name><address><line1>Street</line1><line2>Town</line2></address></response>';
 
         $output = $this->xmlFormatter->format($data);
+
+        // Remove all those pesky newlines for ease of testing validation
         $output = str_replace(PHP_EOL, '', $output);
         $this->assertEquals($expectedOutput, $output);
     }
@@ -57,6 +59,8 @@ class XmlFormatterTest extends TestCase
 
 
         $output = $this->xmlFormatter->format($data);
+
+        // Remove all those pesky newlines for ease of testing validation
         $output = str_replace(PHP_EOL, '', $output);
         $this->assertEquals($expectedOutput, $output);
     }
