@@ -32,3 +32,14 @@ or:
 to run the available unit tests:  
 
 `./vendor/bin/phpunit`
+
+## Notes
+Currently the script does not support headers that are nested with a depth greater than 1. For example, the following headers will work:  
+
+`adress_line1`,  
+`address_line2`  
+
+the following headers are not currently supported:  
+
+`address_lines_line1`,  
+`address_lines_line2`
