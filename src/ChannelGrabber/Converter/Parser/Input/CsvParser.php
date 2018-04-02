@@ -48,22 +48,24 @@ class CsvParser implements InputParserInterface
         // Set the formatted headings as the structure
         $this->structure = $formattedHeadings;
 
-        $output = $this->structure;
+        $output = [];
 
         /**
          * Iterate over the csv rows, then iterate over the structure.
          *  Find the relevant row field that should be mapped to the array key (as determined above) and set it
          */
         foreach ($csv as $row) {
+            $data = [];
             foreach ($this->structure as $heading => $value) {
                 if (is_array($value)) {
                     foreach($value as $subHeading => $subValue) {
-                        $output[$heading][$subHeading] = $row[$subValue];
+                        $data[$heading][$subHeading] = $row[$subValue];
                     }
                 } else {
-                    $output[$heading] = $row[$value];
+                    $data[$heading] = $row[$value];
                 }
             }
+            $output[] = $data;
         }
         return $output;
     }
